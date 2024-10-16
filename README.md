@@ -15,7 +15,7 @@ your solutions.
 Compile and execute the codes using the University HPC. Note this is a shared resource with a queue may become
 busy near the hand in date so make sure you give plenty of time to run your code and don’t leave it to the last
 minute. If you are unsure how to use the HPC please check the lab notes and the instructions on Moodle.
-
+\n
 Step 1 (10 Marks)
 You are required to compute a temperature distribution for a rectangular 2D problem with boundary conditions set
 at top 15°C, bottom 60°C, left 47°C and right 100°C with a range of problem sizes. To do this you are required to
