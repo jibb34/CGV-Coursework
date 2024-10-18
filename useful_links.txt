@@ -1,0 +1,4 @@
+Resources for Part 1
+https://www.digitalocean.com/resources/articles/comparing-aws-azure-gcp
+https://www.baculasystems.com/blog/high-performance-computing-vs-cloud-computing/
+
