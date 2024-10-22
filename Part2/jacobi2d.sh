@@ -12,15 +12,16 @@ gcc jacobi2.c -O0 -0 jacobi0
 gcc jacobi2.c -O -o jacobi1
 gcc jacobi2.c -O2 -o jacobi2
 gcc jacobi2.c -O3 -o jacobi3
-for i in {100..200}; do
+for i in {100..500}; do
   ./jacobi0 $i $i .0001
+  echo "\n" >>computationTime.csv
 done
-for i in {100..200}; do
+for i in {100..500}; do
   ./jacobi1 $i $i .0001
 done
-for i in {100..200}; do
+for i in {100..500}; do
   ./jacobi2 $i $i .0001
 done
-for i in {100..200}; do
+for i in {100..500}; do
   ./jacobi3 $i $i .0001
 done
