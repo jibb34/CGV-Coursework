@@ -11,4 +11,3 @@
 for i in {100..200}; do
   ./jacobi $i $i .0001
 done
-

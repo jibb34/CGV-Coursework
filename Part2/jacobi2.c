@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
   int n;
   double tol; // = 0.0001;
   FILE *csv;
-  csv = fopen("computationTime.csv", "w+");
+  csv = fopen("computationTime.csv", "a");
   int i, j, iter;
 
   m = atoi(argv[1]);
@@ -73,7 +73,8 @@ int main(int argc, char *argv[]) {
   gettimeofday(&stopTime, NULL);
   totalTime = (stopTime.tv_sec * 1000000 + stopTime.tv_usec) -
               (startTime.tv_sec * 1000000 + startTime.tv_usec);
-  printf("%ld,", totalTime);
+  fprintf(csv, "%ld,", totalTime);
+  fclose(csv);
   // print results
   // printf("iter = %d  difmax = %9.11lf", iter, difmax);
   // for (i = 0; i <= m + 1; i++) {
