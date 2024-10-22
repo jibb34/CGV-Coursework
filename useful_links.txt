@@ -4,4 +4,6 @@ https://www.baculasystems.com/blog/high-performance-computing-vs-cloud-computing
 https://azure.microsoft.com/en-gb/pricing/calculator/
 https://cloud.google.com/products/calculator
 https://calculator.aws/#/
+https://rescale.com/blog/the-real-cost-of-high-performance-computing/
+https://ieeexplore.ieee.org/abstract/document/7742995
 

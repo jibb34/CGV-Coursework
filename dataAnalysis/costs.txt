@@ -1,0 +1,13 @@
+Things to consider:
+Up Front cost:
+  > CPU Price
+  > GPU Price
+  > Storage HDD/SSD
+  > RAM Cost
+  > Cables
+  > dedicated building infrastructure
+Operational Cost:
+  > Cooling *
+  > Power draw
+  > Sys-admin staff salary
+  > Tool Licences

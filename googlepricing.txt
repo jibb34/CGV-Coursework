@@ -1,0 +1,9 @@
+per Core-hour:
+predefined vCPU: 
+1 year resource based: $0.02403701/coreHour
+1 year flexible CUD consumption rate: $0.0274702464/coreHour
+on demand price: $0.03815312/corehour
+42000 CPU hours:
+
+between 1602.43 and 1009.55 a month
+
