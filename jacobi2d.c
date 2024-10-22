@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
   double t[m + 2][n + 2], tnew[m + 1][n + 1], diff, difmax;
 
-  printf("%d %d %lf\n", m, n, tol);
+  // printf("%d %d %lf\n", m, n, tol);
 
   // initialise temperature array
   for (i = 0; i <= m + 1; i++) {
@@ -26,12 +26,12 @@ int main(int argc, char *argv[]) {
 
   // fix boundary conditions
   for (i = 1; i <= m; i++) {
-    t[i][0] = 40.0;
-    t[i][n + 1] = 90.0;
+    t[i][0] = 15.0;
+    t[i][n + 1] = 60.0;
   }
   for (j = 1; j <= n; j++) {
-    t[0][j] = 30.0;
-    t[m + 1][j] = 50.0;
+    t[0][j] = 47.0;
+    t[m + 1][j] = 100.0;
   }
 
   // main loop
