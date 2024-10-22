@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
   double t[m + 2][n + 2], tnew[m + 1][n + 1], diff, difmax;
 
-  printf("%d %d %lf\n", m, n, tol);
+  // printf("%d %d %lf\n", m, n, tol);
 
   // initialise temperature array
   for (i = 0; i <= m + 1; i++) {
@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
   gettimeofday(&stopTime, NULL);
   totalTime = (stopTime.tv_sec * 1000000 + stopTime.tv_usec) -
               (startTime.tv_sec * 1000000 + startTime.tv_usec);
-  fprintf(csv, "%ld,", totalTime);
+  printf("%ld,", totalTime);
   // print results
   // printf("iter = %d  difmax = %9.11lf", iter, difmax);
   // for (i = 0; i <= m + 1; i++) {
