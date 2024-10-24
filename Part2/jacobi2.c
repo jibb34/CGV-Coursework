@@ -75,13 +75,14 @@ int main(int argc, char *argv[]) {
               (startTime.tv_sec * 1000000 + startTime.tv_usec);
   fprintf(csv, "%ld,", totalTime);
   fclose(csv);
+
   // print results
-  // printf("iter = %d  difmax = %9.11lf", iter, difmax);
-  // for (i = 0; i <= m + 1; i++) {
-  //   printf("\n");
-  //   for (j = 0; j <= n + 1; j++) {
-  //     printf("%3.5lf ", t[i][j]);
-  //   }
-  // }
-  // printf("\n");
+  printf("iter = %d  difmax = %9.11lf", iter, difmax);
+  for (i = 0; i <= m + 1; i++) {
+    printf("\n");
+    for (j = 0; j <= n + 1; j++) {
+      printf("%3.5lf ", t[i][j]);
+    }
+  }
+  printf("\n");
 }
