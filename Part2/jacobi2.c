@@ -29,9 +29,7 @@ int main(int argc, char *argv[]) {
   }
   // start timer
   struct timeval startTime, stopTime;
-  long totalTime; // total time elapsed
-
-  gettimeofday(&startTime, NULL);
+  clock_t begin = clock();
 
   // fix boundary conditions
   for (i = 1; i <= m; i++) {
@@ -70,10 +68,10 @@ int main(int argc, char *argv[]) {
       }
     }
   }
-  gettimeofday(&stopTime, NULL);
-  totalTime = (stopTime.tv_sec * 1000000 + stopTime.tv_usec) -
-              (startTime.tv_sec * 1000000 + startTime.tv_usec);
-  fprintf(csv, "%ld,", totalTime);
+  clock_t end = clock();
+  double totalTime = (double)(end - begin);
+  fprintf(csv, "%f,", totalTime);
+
   fclose(csv);
 
   // print results
