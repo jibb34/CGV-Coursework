@@ -9,8 +9,9 @@ int main(int argc, char *argv[]) {
   int m;
   int n;
   double tol; // = 0.0001;
-  FILE *csv;
+  FILE *csv, *csv2;
   csv = fopen("computationTime.csv", "a");
+  csv2 = fopen("jacobiResult.csv", "w+");
   int i, j, iter;
 
   m = atoi(argv[1]);
@@ -75,15 +76,16 @@ int main(int argc, char *argv[]) {
 
   fprintf(csv, "%ld,", totalTime);
 
-  fclose(csv);
-
   // print results
-  // printf("iter = %d  difmax = %9.11lf", iter, difmax);
-  // for (i = 0; i <= m + 1; i++) {
-  //   printf("\n");
-  //   for (j = 0; j <= n + 1; j++) {
-  //     printf("%3.5lf ", t[i][j]);
-  //   }
-  // }
-  // printf("\n");
+  printf("iter = %d  difmax = %9.11lf", iter, difmax);
+  for (i = 0; i <= m + 1; i++) {
+    fprintf(csv2, "%3.5lf", t[i][0]);
+    for (j = 1; j <= n + 1; j++) {
+      fprintf(csv2, ",%3.5lf", t[i][j]);
+    }
+    fprintf(csv2, "\n");
+  }
+  printf("\n");
+  fclose(csv);
+  fclose(csv2);
 }
