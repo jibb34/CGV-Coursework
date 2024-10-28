@@ -1,3 +1,5 @@
 Step 1: I began by setting the boundary conditions in the code. I ran the program as-is, and it printed out the matrix result. In order to report the execution time, I used gettimeofday at the beginning and end of the algorithm (ignoring initializations and setup code.) Using these values I was able to gather the time (in microseconds) it took for the Jacobi algorithm to execute. I automated the slurm script to run the code 100 times from 100x100 to 200x200, and each time I sent the results to a .csv file. I then used Python to create a Pandas Series from the CSV, and displayed it using PyPlot. I then used SciPy to analyse the graph and create a best-fit curve. The formula ended up being <insert formula>.
 I then modified the slurm script to run 50 times from 100-200 for optimisation level 0, 1, 2, and 3. I printed the results to a separate CSV file, and plotted the results, showing the improvement from the various levels of optimisation.
-Step 2
+To check correctness, I wrote a bash file and a python file that compared the csv file output from the original jacobi2d.c to my modified c file. Running this on a range of values proves that the code it is testing can be trusted across different levels of optimization. This was expected for part 1, as I only modified the code to provide timings. For step 2 however, this will become more useful.
+Step 2:
+
